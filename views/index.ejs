@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Page Créer par Moise Rakotoniaina">
+    <title>Clone of Slack</title>
+    <%- include('./partial/css_obligatoire.ejs') %>
+
+</head>
+
+<body>
+<div class="page-wrapper chiller-theme toggled">
+  <input type="hidden" id="cible" value ="<%= cible %>">
+  <input type="hidden" id="type" value ="<%= type %>">
+
+  <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-content">
+      <div class="sidebar-brand">
+        <a href="#">Clone of Slack</a>
+        <div id="close-sidebar">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <div class="sidebar-header">
+        <div class="user-pic">
+          <img class="img-responsive img-rounded" src="<%= image %>"
+            alt="User picture">
+        </div>
+
+        <div class="user-info" style="cursor: pointer;">
+          <span class="user-name" >
+          </span>
+          <span class="user-role"><%= job %></span>
+          <span class="user-status">
+            <span><%= status %></span>
+          </span>
+        </div>
+      </div>
+      <!-- sidebar-search  -->
+      <div class="sidebar-menu">
+        <ul>
+          <li class="header-menu">
+            <span>Channels</span>
+          </li>
+          <li class="sidebar-dropdown newchannel">
+            <a href="#">
+              <i class="fa fa-plus" ></i>
+              <span>New private Channel</span>
+            </a>
+          </li>
+          <% for(channel of channels) { %>
+          <li class="info" data-id="<%= channel.id %>" onclick="dashboard.redirect('<%= channel.id %>&type=ch')">
+            <a href="#">
+              <% if(channel.status == "public"){ %>
+                <i class="fa fa-eye" ></i>
+              <% } else{ %>  
+                <i class="fa fa-lock" ></i>
+             <% } %>
+              
+              <span><%= channel.titre %></span>
+              <span class="badge badge-danger " data-id="<%= channel.id %>">0</span>
+            </a>
+          </li>
+          <% } %>
+
+          <li class="header-menu">
+            <span>Direct Messages</span>
+          </li>
+          <% for(contact of contacts) { %>
+          <li class="info" data-id="<%= contact._id %>" data-email="<%= contact.email %>"  onclick="dashboard.redirect('<%= contact._id %>&type=dm')">
+            <a href="#">
+              <i class="fa fa-user"></i>
+              <span><%= contact.email %> </span>
+              <!--<span class="badge badge-pill badge-primary">Beta</span>-->
+            </a>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+      <!-- sidebar-menu  -->
+    </div>
+    <!-- sidebar-content  -->
+    <div class="sidebar-footer">
+      <a href="#">
+        <i class="fa fa-power-off"></i>
+      </a>
+    </div>
+  </nav>
+  <!-- sidebar-wrapper  -->
+  <main class="page-content">
+    <div class="container-fluid">
+        <%- include('./chat/chat_room.ejs') %>
+    </div>
+  </main>
+  <!-- page-content" -->
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- page-wrapper -->
+<%- include('./partial/js_obligatoire.ejs') %>
+<script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+<script src="../public/js/page_index.js"></script>
+</body>
+
+</html>

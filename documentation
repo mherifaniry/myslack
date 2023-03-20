@@ -1,0 +1,14 @@
+ websocket: -  https://www.youtube.com/watch?v=o8Fn9BgqoQM
+            - https://socket.io/docs/v4/
+
+Json web tocken: https://www.youtube.com/watch?v=SnoAwLP1a-0&list=PL4cUxeGkcC9iqqESP8335DA5cRFp8loyp
+
+comment installer les dépendances en nodejs?
+  node --harmony ./postinstall.Js
+
+NB: il faut installe nodemon
+
+bdd : 
+https://cloud.mongodb.com/v2/61409fb4fceba31a153f6d75#/clusters
+username: mherifaniry
+mdp: Q6hnv7V6x4q9Rf7V

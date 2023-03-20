@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>Login</title>
+    <%- include('../partial/css_obligatoire.ejs') %>
+    
+
+</head>
+
+<body>
+<div class="page-wrapper chiller-theme toggled">
+  <!-- sidebar-wrapper  -->
+  <main class="page-content">
+    <div class="container-fluid">
+        <div class="container login-container">
+            <div class="row">
+                <div class="col-md-6 login-form-1">
+                    <h3>S'identifier</h3>
+                    <form action="/user/login" method="post" id="form-login">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Adresse e-mail" name="email" id="email" required/>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Mot de passe" name="mdp" id="mdp" required/>
+                            <span id="lresponse"></span>
+                        </div>
+                        <div class="form-group"></div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-success" value="Se connecter" />
+                        </div>
+
+                    </form>
+                    
+                </div>
+                <div class="col-md-6 login-form-2">
+                    <div class="login-logo">
+                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    </div>
+                    <h3>S'inscrire</h3>
+
+                    <form action="/user/register" method="post" id="form-register">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Nom" name="nom" id="_nom" required/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Prénom" name="prenom" id="_prenom" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Adresse e-mail" name="email" id="_email" required/>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Mot de passe" name="mdp" id="_mdp" required/>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Confirmation mot de passe" name="cmdp" id="_cmdp" required/>
+                            <span id="rresponse"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-success" value="Créer nouveau compte" />
+                            
+                        </div>    
+                    </form>
+                        
+            
+                </div>
+            </div>
+        </div>
+    </div>
+  </main>
+  <!-- page-content" -->
+</div>
+<!-- page-wrapper -->
+
+<%- include('../partial/js_obligatoire.ejs') %>
+<script src="../public/js/login.js"></script>
+</body>
+
+</html>
