@@ -1,3 +1,4 @@
+
 # NodeJS CHAT APPLICATION for NOVITY
 
 TASK: Try to create a clone of Slack.
@@ -39,7 +40,7 @@ For development, you will only need Node.js and a node global package, NPM, inst
 ### Setup the project 
 
 - Donwload the zip project and unzip it 
-- cd PROJECT_ITLE
+- cd PROJECT_TITLE
 - Run the next command to install dependencies
 
 ```http
@@ -47,6 +48,7 @@ For development, you will only need Node.js and a node global package, NPM, inst
 ```
 
 - Create .env file inside the main directory and add the following configurations
+- NB: you may change to other port but make sure to use the same on the URL
 
 ```http
   TOKEN_KEY = '32e3ecd1ef81b909b4a7b0dc336e15c6'
