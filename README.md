@@ -57,7 +57,14 @@ For development, you will only need Node.js and a node global package, NPM, inst
 
 ### Runnig the project 
 
+- commande line
 
 ```http
   node server.js
+```
+
+- Open your browser (chrome or firefox) and open the following link
+
+```http
+  http://localhost:8888/user/login
 ```
