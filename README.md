@@ -70,6 +70,17 @@ For development, you will only need Node.js and a node global package, NPM, inst
 ```http
   http://localhost:8888/user/login
 ```
+### TEST
+- Create an accounte (nom, prenom, email, mdp)
+- I send you an image on mail and this is the explaination
+- 1: To display account information. Click 1 to modify the information.
+- 2: Content of a conversation
+- 3: List of public (eye) and private (padlock) channels. No invitation to join a private chat at the moment but anyone can chat on public channels
+- 4: direct messages with other users
+- 5: To disconnect
+- 6: message to send
+- 7: to send a message
+
 ### REMARQUES
 - Make sure you use internet network because i used online MOONGOSE ATLAS DATABASE and many other CDN
-- I did my best despite of electricity failure yesterday, I spent 24 hours on this project cause i went in church saturday. Thank you for understanding :) 
+- I did my best despite of electricity failure yesterday, I spent 24 hours on this project cause i went in church saturday. Thank you for understanding :
