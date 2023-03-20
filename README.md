@@ -17,6 +17,7 @@ BONUS:
 - UI/UX (NOT DONE)
 - Be creative ;)
 
+
 ## Requirements
 For development, you will only need Node.js and a node global package, NPM, installed in your environement.
 
@@ -38,3 +39,25 @@ For development, you will only need Node.js and a node global package, NPM, inst
 ### Setup the project 
 
 - Donwload the zip project and unzip it 
+- cd PROJECT_ITLE
+- Run the next command to install dependencies
+
+```http
+  npm install
+```
+
+- Create .env file inside the main directory and add the following configurations
+
+```http
+  TOKEN_KEY = '32e3ecd1ef81b909b4a7b0dc336e15c6'
+  PORT = 8888
+  DB_USERNAME = 'mherifaniry'
+  DB_PASSWORD = 'Q6hnv7V6x4q9Rf7V'
+```
+
+### Runnig the project 
+
+
+```http
+  node server.js
+```
