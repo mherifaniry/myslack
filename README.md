@@ -70,3 +70,6 @@ For development, you will only need Node.js and a node global package, NPM, inst
 ```http
   http://localhost:8888/user/login
 ```
+### REMARQUES
+- Make sure you use internet network because i used online MOONGOSE ATLAS DATABASE and many other CDN
+- I did my best despite of electricity failure yesterday, I spent 24 hours on this project cause i went in church saturday. Thank you for understanding :) 
