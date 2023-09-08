@@ -1,5 +1,5 @@
 
-# NodeJS CHAT APPLICATION for NOVITY
+# NodeJS CHAT APPLICATION for CyberSecurity
 
 TASK: Try to create a clone of Slack.
 Slack is one of the most widely used collaboration and messaging platform used by software teams worldwide, and boasts of a wide range of functionalities and sleek UI.
